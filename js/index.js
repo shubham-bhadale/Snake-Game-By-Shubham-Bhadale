@@ -2,8 +2,8 @@ let inputDir = {x: 0, y: 0};
 const foodSound = new Audio('music/food.mp3');
 const gameOverSound = new Audio('music/gameover.mp3');
 const moveSound = new Audio('music/move.mp3');
-const musicSound = new Audio('music/music.mp3');
-let speed = 19;
+//const musicSound = new Audio('music/music.mp3');
+let speed = 15;
 let score = 0;
 let lastPaintTime = 0;
 let snakeArr = [
@@ -46,11 +46,11 @@ function gameEngine(){
     //Updating the snake array & Food
     if(isCollide(snakeArr)){
         gameOverSound.play();
-        musicSound.pause();
+        //musicSound.pause();
         inputDir =  {x: 0, y: 0}; 
         alert("Game Over. Press any key to play again!");
         snakeArr = [{x: 13, y: 15}];
-        musicSound.play();
+        //musicSound.play();
         score = 0; 
     }
 
@@ -104,7 +104,7 @@ function gameEngine(){
 
 }
 
-musicSound.play();
+//musicSound.play();
 let hiscore = localStorage.getItem("hiscore");
 if(hiscore === null){
     hiscoreval = 0;
@@ -122,32 +122,32 @@ window.addEventListener('keydown', e =>{
     switch (e.key) {
         case "ArrowUp":
             //console.log("ArrowUp");
-        	isGameRunning = true;
-        	window.requestAnimationFrame(main);
+            isGameRunning = true;
+            window.requestAnimationFrame(main);
             inputDir.x = 0;
             inputDir.y = -1;
             break;
 
         case "ArrowDown":
             //console.log("ArrowDown");
-        	isGameRunning = true;
-        	window.requestAnimationFrame(main);
+            isGameRunning = true;
+            window.requestAnimationFrame(main);
             inputDir.x = 0;
             inputDir.y = 1;
             break;
 
         case "ArrowLeft":
             //console.log("ArrowLeft");
-        	isGameRunning = true;
-        	window.requestAnimationFrame(main);
+            isGameRunning = true;
+            window.requestAnimationFrame(main);
             inputDir.x = -1;
             inputDir.y = 0;
             break;
 
         case "ArrowRight":
             //console.log("ArrowRight");
-        	isGameRunning = true;
-        	window.requestAnimationFrame(main);
+            isGameRunning = true;
+            window.requestAnimationFrame(main);
             inputDir.x = 1;
             inputDir.y = 0;
             break;
