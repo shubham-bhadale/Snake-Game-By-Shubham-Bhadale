@@ -9,11 +9,15 @@ let lastPaintTime = 0;
 let snakeArr = [
     {x: 13, y: 15}
 ];
+let isGameRunning = true;
 
 food = {x: 6, y: 7};
 
 function main(ctime) {
-    window.requestAnimationFrame(main);
+    if(isGameRunning == true)
+	{
+    	window.requestAnimationFrame(main);
+	}
     // console.log(ctime)
     if((ctime - lastPaintTime)/1000 < 1/speed){
         return;
@@ -111,31 +115,48 @@ else{
 
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', e =>{
-    inputDir = {x: 0, y: 1} // Start the game
+    //inputDir = {x: 0, y: 1} // Start the game
     moveSound.play();
     switch (e.key) {
         case "ArrowUp":
             //console.log("ArrowUp");
+        	isGameRunning = true;
+        	window.requestAnimationFrame(main);
             inputDir.x = 0;
             inputDir.y = -1;
             break;
 
         case "ArrowDown":
             //console.log("ArrowDown");
+        	isGameRunning = true;
+        	window.requestAnimationFrame(main);
             inputDir.x = 0;
             inputDir.y = 1;
             break;
 
         case "ArrowLeft":
             //console.log("ArrowLeft");
+        	isGameRunning = true;
+        	window.requestAnimationFrame(main);
             inputDir.x = -1;
             inputDir.y = 0;
             break;
 
         case "ArrowRight":
             //console.log("ArrowRight");
+        	isGameRunning = true;
+        	window.requestAnimationFrame(main);
             inputDir.x = 1;
             inputDir.y = 0;
+            break;
+
+        case " ":
+            //console.log("SpaceBar");
+            isGameRunning = isGameRunning ? false : true;
+            if(isGameRunning)
+            {
+            	window.requestAnimationFrame(main);
+            }
             break;
         default:
             break;
