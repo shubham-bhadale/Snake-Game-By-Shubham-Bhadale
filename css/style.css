@@ -28,9 +28,10 @@
     top: 59px;
     right: 140px;
     font-size: 39px;
-    font-weight: bold;
+    font-weight: 800;
     font-family: 'New Tegomin', serif;
 }
+
 
 #board{
     background: linear-gradient(rgb(175 233 249), rgb(239 235 224));
@@ -61,20 +62,63 @@
     border-radius: 8px;
 }
 
-#moveBox{
+#settingsBox{
 	position: absolute;
-    bottom: 50px;
-    right: 50px;
-    font-size: 24px;
+	font-size: 45px;
+	top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+/*Control Popup*/
+#moveBox{
+	position: relative;
+	margin-top: 50px;
+	text-align: center;
+    font-size: 39px;
     font-weight: 800;
     font-family: 'New Tegomin', serif;
 }
 
 #pauseBox{
-	position: absolute;
-    bottom: 10px;
-    right: 50px;
-    font-size: 24px;
+	position: relative;
+	margin-top: 10px;
+	text-align: center;
+    font-size: 39px;
     font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#gameControlBox{
+	font-size: 45px;
+	top: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+
+#controlBox{
+	position: relative;
+	font-size: 45px;
+	text-align: center;
+}
+
+#popUpCloseBox
+{
+	font-size: 39px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+#popUpBox{
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	width: 50vw;
+	height: 70vh;
+	border: 2px solid black;
+	background: linear-gradient(rgb(175 233 249), rgb(239 235 224));
+	font-weight: bold;
     font-family: 'New Tegomin', serif;
 }
