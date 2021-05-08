@@ -5,3 +5,5 @@ Developed in HTML, CSS, Javascript only.<br>
 No library used.<br><br>
 # New thing I learned is : requestAnimationFrame()<br>
 https://stackoverflow.com/questions/38709923/why-is-requestanimationframe-better-than-setinterval-or-settimeout
+<br>
+If you like this project you can always Buy Me A Coffee ;-)
