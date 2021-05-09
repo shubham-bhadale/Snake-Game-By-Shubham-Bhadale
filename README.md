@@ -7,10 +7,10 @@ No library used.<br><br>
 https://stackoverflow.com/questions/38709923/why-is-requestanimationframe-better-than-setinterval-or-settimeout
 <br><br>
 # Controls <br>
-Start/Move: &#x2190;&#x2191;&#x2192;&#x2193; <br>
-Resume/Pause: SpaceBar<br>
-Music On/Off: M<br>
-Sound On/Off: S<br>
+Start/Move : &#x2190;&#x2191;&#x2192;&#x2193; <br>
+Resume/Pause : SpaceBar<br>
+Music On/Off : M<br>
+Sound On/Off : S<br>
 <br><br>
 # Click to Play<br>
 https://shubham-bhadale.github.io/Snake-Game-By-Shubham-Bhadale/
